@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#191414"
+    android:gravity="center"
+    android:padding="10pt"
+    tools:context=".Story">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <Button
+            android:backgroundTint="@color/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1pt"
+            android:text="Find"
+            android:onClick="findTaggedImages"
+            android:textSize="12pt"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="3pt"
+
+            />
+
+
+        <EditText
+            android:textColor="#FFFFFF"
+            android:id="@+id/userTags"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="12pt"
+            android:hint="Enter Tags"
+            />
+
+    </LinearLayout>
+    <CheckBox
+        android:textColor="#FFFFFF"
+        android:id="@+id/sketchCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1pt"
+        android:layout_marginRight="8pt"
+        android:paddingBottom="5pt"
+        android:scaleType="fitCenter"
+        android:text="Include Sketches"
+        android:textSize="12pt"
+    />
+
+    <ListView
+        android:id="@+id/photoListView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </ListView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:paddingVertical="5pt"
+            android:text="You Selected: "
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:paddingVertical="5pt"
+            android:text=""
+            android:id= "@+id/selectedTags"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id= "@+id/story"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+    <Button
+        android:backgroundTint="@color/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1pt"
+        android:onClick="onSubmit"
+        android:layout_marginRight="8pt"
+        android:scaleType="fitCenter"
+        android:text="Story"
+        android:textSize="12pt" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1pt"
+        android:onClick="toMain"
+        android:backgroundTint="@color/green"
+        android:scaleType="fitCenter"
+        android:text="Back"
+        android:textSize="12pt"
+        />
+    </LinearLayout>
+</LinearLayout>

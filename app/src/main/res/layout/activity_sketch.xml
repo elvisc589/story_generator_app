@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="10pt"
+    android:background="#191414"
+    tools:context=".Photo">
+
+    <com.example.asmt4.MyDrawingArea
+        android:paddingVertical="1pt"
+        android:id="@+id/big_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/border"
+        />
+    <LinearLayout
+        android:paddingVertical="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:backgroundTint="@color/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tags: "
+            android:textSize="12pt"
+            android:onClick="generateTags"/>
+
+        <EditText
+            android:textColor="#FFFFFF"
+            android:id="@+id/userTags"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="12pt"
+            android:hint="Enter Tags"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:backgroundTint="@color/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1pt"
+            android:text="Clear"
+            android:textSize="12pt"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="3pt"
+            android:onClick="onClear"
+            />
+        <Button
+            android:backgroundTint="@color/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="12pt"
+            android:layout_marginLeft="3pt"
+            android:scaleType="fitCenter"
+            android:onClick="saveToDataBase"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:backgroundTint="@color/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find"
+            android:textSize="12pt"
+            android:onClick="find"
+            />
+
+        <EditText
+            android:id="@+id/getTag"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="12pt"
+            android:layout_marginLeft="3pt"
+            android:hint="Enter Tag"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:paddingVertical="1pt"
+        android:id="@+id/sketchListView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        />
+    <Button
+        android:layout_marginTop="10pt"
+        android:backgroundTint="@color/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:gravity="center_horizontal"
+        android:textSize="12pt"
+        android:onClick="toMain"
+        />
+
+</LinearLayout>

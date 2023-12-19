@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="backButton" type="id" />
+    <item name="big_image_view" type="id" />
+    <item name="tagsEditText" type="id" />
+    <item name="cameraButton" type="id" />
+    <item name="saveToDBButton" type="id" />
+    <item name="searchTagEditText" type="id" />
+    <item name="findButton" type="id" />
+    <item name="SmallImageView1" type="id" />
+    <item name="SmallTextView1" type="id" />
+    <item name="SmallImageView2" type="id" />
+    <item name="SmallTextView2" type="id" />
+    <item name="SmallImageView3" type="id" />
+    <item name="SmallTextView3" type="id" />
+    <item name="photoTaggerBtn" type="id" />
+    <item name="sketchTaggerBtn" type="id" />
+    <item name="sketchListView" type="id" />
+</resources>
